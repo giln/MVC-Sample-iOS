@@ -16,6 +16,7 @@
 		A721555920C57F6900E93012 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A721555520C57F6900E93012 /* LaunchScreen.storyboard */; };
 		A721555E20C57F7F00E93012 /* UIViewController+Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721555B20C57F7F00E93012 /* UIViewController+Container.swift */; };
 		A721556020C57F7F00E93012 /* UIViewController+Anchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721555D20C57F7F00E93012 /* UIViewController+Anchor.swift */; };
+		A721556420C5935400E93012 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A721556320C5935400E93012 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		A721555720C57F6900E93012 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A721555B20C57F7F00E93012 /* UIViewController+Container.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Container.swift"; sourceTree = "<group>"; };
 		A721555D20C57F7F00E93012 /* UIViewController+Anchor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Anchor.swift"; sourceTree = "<group>"; };
+		A721556320C5935400E93012 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +48,7 @@
 		A721552820C56FB500E93012 = {
 			isa = PBXGroup;
 			children = (
+				A721556320C5935400E93012 /* README.md */,
 				A721553320C56FB600E93012 /* MVC */,
 				A721553220C56FB600E93012 /* Products */,
 			);
@@ -182,6 +185,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A721556420C5935400E93012 /* README.md in Resources */,
 				A721555820C57F6900E93012 /* Assets.xcassets in Resources */,
 				A721555920C57F6900E93012 /* LaunchScreen.storyboard in Resources */,
 			);
