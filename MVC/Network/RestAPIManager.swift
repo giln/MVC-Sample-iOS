@@ -19,8 +19,13 @@ class RestApiManager: NSObject {
         makeHTTPGetRequest(baseURL, onCompletion: {
             data, _ in
 
+            var allApps: [App] = []
+
+            defer {
+                onCompletion(allApps)
+            }
+
             guard let data1 = data else {
-                onCompletion([])
                 return
             }
 
@@ -31,11 +36,8 @@ class RestApiManager: NSObject {
             guard let feed = json?["feed"] as? Payload,
                 let apps = feed["entry"] as? [Payload]
             else {
-                onCompletion([])
                 return
             }
-
-            var allApps: [App] = []
 
             for app in apps {
                 guard let container = app["im:name"] as? Payload,
@@ -48,12 +50,20 @@ class RestApiManager: NSObject {
                     continue
                 }
 
-                let appstoreApp = App(name: name, link: link, appDescription: appDescription)
+                guard let imageContainer = app["im:image"] as? [Payload],
+                    let imageThumbURLString = imageContainer.first?["label"] as? String else {
+                        continue
+                }
 
+
+                let appstoreApp = App()
+                appstoreApp.name = name
+                appstoreApp.link = link
+                appstoreApp.appDescription = appDescription
+                appstoreApp.thumbURLString = imageThumbURLString
+                
                 allApps.append(appstoreApp)
             }
-
-            onCompletion(allApps)
         })
     }
 

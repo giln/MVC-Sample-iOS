@@ -17,6 +17,11 @@
 		A721555E20C57F7F00E93012 /* UIViewController+Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721555B20C57F7F00E93012 /* UIViewController+Container.swift */; };
 		A721556020C57F7F00E93012 /* UIViewController+Anchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721555D20C57F7F00E93012 /* UIViewController+Anchor.swift */; };
 		A721556420C5935400E93012 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A721556320C5935400E93012 /* README.md */; };
+		A721556720C594F100E93012 /* MainCoordinatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721556620C594F100E93012 /* MainCoordinatorViewController.swift */; };
+		A721556920C5953200E93012 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721556820C5953200E93012 /* ListViewController.swift */; };
+		A721556B20C6912400E93012 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721556A20C6912400E93012 /* ReusableView.swift */; };
+		A721556D20C6B5A500E93012 /* App+Listable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721556C20C6B5A500E93012 /* App+Listable.swift */; };
+		A721556F20C6B93C00E93012 /* DownloadTableViewCell+Listable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721556E20C6B93C00E93012 /* DownloadTableViewCell+Listable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +37,11 @@
 		A721555B20C57F7F00E93012 /* UIViewController+Container.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Container.swift"; sourceTree = "<group>"; };
 		A721555D20C57F7F00E93012 /* UIViewController+Anchor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Anchor.swift"; sourceTree = "<group>"; };
 		A721556320C5935400E93012 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		A721556620C594F100E93012 /* MainCoordinatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinatorViewController.swift; sourceTree = "<group>"; };
+		A721556820C5953200E93012 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		A721556A20C6912400E93012 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		A721556C20C6B5A500E93012 /* App+Listable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "App+Listable.swift"; sourceTree = "<group>"; };
+		A721556E20C6B93C00E93012 /* DownloadTableViewCell+Listable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DownloadTableViewCell+Listable.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				A721554B20C57B7B00E93012 /* App.swift */,
+				A721556C20C6B5A500E93012 /* App+Listable.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -96,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				A721554620C57A8500E93012 /* Before */,
+				A721556520C5941000E93012 /* After */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -113,6 +125,7 @@
 			children = (
 				A721555D20C57F7F00E93012 /* UIViewController+Anchor.swift */,
 				A721555B20C57F7F00E93012 /* UIViewController+Container.swift */,
+				A721556A20C6912400E93012 /* ReusableView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -125,6 +138,16 @@
 				A721555720C57F6900E93012 /* Info.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A721556520C5941000E93012 /* After */ = {
+			isa = PBXGroup;
+			children = (
+				A721556620C594F100E93012 /* MainCoordinatorViewController.swift */,
+				A721556820C5953200E93012 /* ListViewController.swift */,
+				A721556E20C6B93C00E93012 /* DownloadTableViewCell+Listable.swift */,
+			);
+			path = After;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,11 +222,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				A721554C20C57B7B00E93012 /* App.swift in Sources */,
+				A721556F20C6B93C00E93012 /* DownloadTableViewCell+Listable.swift in Sources */,
+				A721556B20C6912400E93012 /* ReusableView.swift in Sources */,
+				A721556720C594F100E93012 /* MainCoordinatorViewController.swift in Sources */,
 				A721555120C57CD700E93012 /* AppDetailViewController.swift in Sources */,
 				A721556020C57F7F00E93012 /* UIViewController+Anchor.swift in Sources */,
 				A721554820C57B0500E93012 /* AppListViewController.swift in Sources */,
+				A721556920C5953200E93012 /* ListViewController.swift in Sources */,
 				A721554F20C57BFC00E93012 /* RestAPIManager.swift in Sources */,
 				A721555E20C57F7F00E93012 /* UIViewController+Container.swift in Sources */,
+				A721556D20C6B5A500E93012 /* App+Listable.swift in Sources */,
 				A721553520C56FB600E93012 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

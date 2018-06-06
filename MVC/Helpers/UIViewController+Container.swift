@@ -14,8 +14,10 @@ public extension UIViewController
     /// Embeds a view controller and also adds it's view in the view hierarchay
     ///
     /// - Parameter viewController: ViewController to add
-    public func add(asChildViewController viewController: UIViewController, anchored: Bool = true)
+    public func add(asChildViewController viewController: UIViewController, anchored: Bool = true, subview: UIView? = nil)
     {
+        let someView: UIView = subview ?? view
+
         // Notify Child View Controller before
         viewController.willMove(toParentViewController: self)
 
@@ -23,7 +25,7 @@ public extension UIViewController
         addChildViewController(viewController)
 
         // Add Child View as Subview
-        view.addSubview(viewController.view)
+        someView.addSubview(viewController.view)
 
         if anchored
         {

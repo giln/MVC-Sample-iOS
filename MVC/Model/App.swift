@@ -7,11 +7,12 @@
 //
 
 import Foundation
+import UIKit.UIImage
 
-struct App
-{
-    let name: String
-    let link: String
-    let appDescription : String
+class App {
+    var name: String = ""
+    var link: String = ""
+    var appDescription: String = ""
+    var thumbURLString: String = ""
+    var thumbImage: UIImage?
 }
-
