@@ -12,6 +12,7 @@ import UIKit
 protocol Listable {
     var title: String { get }
     var description: String { get }
+    var thumbURL: String { get }
     func getImage(completion: @escaping (UIImage?) -> Void)
 }
 

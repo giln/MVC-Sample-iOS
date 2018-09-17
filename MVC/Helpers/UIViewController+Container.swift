@@ -19,10 +19,10 @@ public extension UIViewController
         let someView: UIView = subview ?? view
 
         // Notify Child View Controller before
-        viewController.willMove(toParentViewController: self)
+        viewController.willMove(toParent: self)
 
         // Add Child View Controller
-        addChildViewController(viewController)
+        addChild(viewController)
 
         // Add Child View as Subview
         someView.addSubview(viewController.view)
@@ -34,7 +34,7 @@ public extension UIViewController
         }
 
         // Notify Child View Controller after
-        viewController.didMove(toParentViewController: self)
+        viewController.didMove(toParent: self)
     }
 
     /// Removes a view controller from both view controller and view hierachies
@@ -48,15 +48,15 @@ public extension UIViewController
         }
 
         // Notify Child View Controller before
-        viewController.willMove(toParentViewController: nil)
+        viewController.willMove(toParent: nil)
 
         // Remove View
         viewController.view.removeFromSuperview()
 
         // Remove ViewController
-        viewController.removeFromParentViewController()
+        viewController.removeFromParent()
 
         // Notify Child View Controller after
-        viewController.didMove(toParentViewController: nil)
+        viewController.didMove(toParent: nil)
     }
 }

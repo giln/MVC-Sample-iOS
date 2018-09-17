@@ -24,20 +24,19 @@ extension App: Listable {
     }
 
     func getImage(completion: @escaping (UIImage?) -> Void) {
-        var returnImage: UIImage?
 
         guard let url = URL(string: thumbURLString) else {
-            completion(returnImage)
+            completion(self.image)
             return
         }
 
         URLSession.shared.dataTask(with: url) { data, _, _ in
             if let someData = data {
-                returnImage = UIImage(data: someData)
+                self.image = UIImage(data: someData)
             }
-            self.image = returnImage
+
             DispatchQueue.main.async {
-                completion(returnImage)
+                completion(self.image)
             }
 
         }.resume()
